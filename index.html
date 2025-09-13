@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezin Sajid - Portfolio</title> <!-- EDIT: Change your name here -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: var(--bg-primary);">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full backdrop-blur-sm shadow-sm z-50" style="background-color: rgba(15, 23, 42, 0.9);">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- EDIT: Change your name/logo here -->
+                <div class="flex items-center space-x-2">
+                    <!-- THEME: Logo background uses primary color -->
+                    <div class="w-8 h-8 rounded-lg flex items-center justify-center"
+                        style="background-color: var(--primary-color);">
+                        <span class="text-white font-bold text-sm">LS</span> <!-- EDIT: Your initials -->
+                    </div>
+                    <span class="text-xl font-bold" style="color: var(--text-primary);">Lezin Sajid</span>
+                    <!-- EDIT: Your name -->
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link font-medium" style="color: var(--text-secondary);">Home</a>
+                    <a href="#about" class="nav-link font-medium" style="color: var(--text-secondary);">About</a>
+                    <a href="#skills" class="nav-link font-medium" style="color: var(--text-secondary);">Skills</a>
+                    <a href="#projects" class="nav-link font-medium" style="color: var(--text-secondary);">Projects</a>
+                    <a href="#contact" class="nav-link font-medium" style="color: var(--text-secondary);">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden" style="color: var(--text-secondary);">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden border-t"
+                style="background-color: var(--bg-primary); border-color: var(--border-color);">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 font-medium" style="color: var(--text-secondary);">Home</a>
+                    <a href="#about" class="block px-3 py-2 font-medium" style="color: var(--text-secondary);">About</a>
+                    <a href="#skills" class="block px-3 py-2 font-medium"
+                        style="color: var(--text-secondary);">Skills</a>
+                    <a href="#projects" class="block px-3 py-2 font-medium"
+                        style="color: var(--text-secondary);">Projects</a>
+                    <a href="#contact" class="block px-3 py-2 font-medium"
+                        style="color: var(--text-secondary);">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="fade-in">
+                <!-- EDIT: Replace with your profile image -->
+                <div class="w-40 h-40 rounded-full overflow-hidden mx-auto">
+                    <img src="photos/IMG_4134.jpeg" alt="My Photo" class="w-full h-full object-cover">
+                </div> <!-- EDIT: Replace with your photo or emoji -->
+            </div>
+
+            <!-- EDIT: Change your name and title -->
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">
+                Hi, I'm <span style="color: var(--text-white);">Lezin Sajid</span>
+            </h1>
+
+            <!-- EDIT: Change your profession/title -->
+            <div class="text-2xl md:text-3xl mb-6">
+                <span id="typing-text" class="typing-animation">Aspiring Full Stack Developer</span>
+            </div>
+
+            <!-- EDIT: Change your description -->
+            <p class="text-xl mb-8 max-w-2xl mx-auto" style="color: rgba(255,255,255,0.8);">
+                Final-year BTech student exploring web development, aiming to create innovative and user-friendly
+                digital experiences.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#projects" class="btn-primary px-8 py-3 rounded-lg font-semibold transition-colors">
+                    View My Work
+                </a>
+                <a href="#contact" class="btn-secondary px-8 py-3 rounded-lg font-semibold transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20" style="background-color: var(--bg-secondary);">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--text-primary);">About Me</h2>
+                <!-- THEME: Accent line uses primary color -->
+                <div class="w-20 h-1 mx-auto" style="background-color: var(--primary-color);"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- EDIT: Replace with your actual photo -->
+                <div class="text-center lg:text-left">
+                    <!-- THEME: Photo placeholder uses monochrome gradient -->
+                    <div
+                        class="w-80 h-80 mx-auto lg:mx-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center overflow-hidden">
+                        <img src="photos/IMG_4134.jpeg" alt="My Photo"
+                            class="w-full h-full object-cover"><!-- EDIT: Replace with your photo -->
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- EDIT: Change your story/bio -->
+                    <h3 class="text-2xl font-bold" style="color: var(--text-primary);">My Story</h3>
+                    <p class="leading-relaxed" style="color: var(--text-secondary);">
+                        I'm an aspiring Full Stack Developer at the start of my journey in web development. My curiosity
+                        about how websites and applications are built has pushed me to learn the foundations of HTML,
+                        CSS, and JavaScript. While I don’t yet have professional experience, I’m actively building
+                        projects, experimenting with new technologies, and improving my skills step by step. My goal is
+                        to grow into a developer who can create meaningful applications that not only work but also make
+                        people’s lives easier.
+                    </p>
+
+                    <p class="leading-relaxed" style="color: var(--text-secondary);">
+                        As a beginner developer, I’m passionate about learning how web applications are built and how
+                        technology can solve everyday problems. Right now, I’m focused on strengthening my foundation in
+                        front-end development and gradually expanding into full-stack skills. Outside of coding, I love
+                        exploring new tech trends, connecting with other learners, and sharing what I discover along the
+                        way.
+                    </p>
+
+                    <!-- EDIT: Update your details -->
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Location</h4>
+                            <p style="color: var(--text-secondary);">Kerala, India</p> <!-- EDIT: Your location -->
+                        </div>
+                        <div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Experience</h4>
+                            <p style="color: var(--text-secondary);">2025 - present</p> <!-- EDIT: Your experience -->
+                        </div>
+                        <div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Email</h4>
+                            <p style="color: var(--text-secondary);">lezinsajid@gmail.com</p> <!-- EDIT: Your email -->
+                        </div>
+                        <div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Phone</h4>
+                            <p style="color: var(--text-secondary);">+91 9562179012</p> <!-- EDIT: Your phone -->
+                        </div>
+                    </div>
+
+                    <!-- EDIT: Add link to your resume -->
+                    <div class="pt-4">
+                        <a href="resume_lezinSajid.pdf" target="_blank"
+                            class="btn-primary px-6 py-3 rounded-lg transition-colors inline-flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20" style="background-color: var(--bg-primary);">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--text-primary);">Skills & Technologies</h2>
+                <div class="w-20 h-1 mx-auto" style="background-color: var(--primary-color);"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Technical Skills -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-8" style="color: var(--text-primary);">Technical Skills</h3>
+                    <div class="space-y-6">
+
+                        <!-- HTML / CSS -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium" style="color: var(--text-primary);">HTML / CSS</span>
+                                <span style="color: var(--text-secondary);">70%</span>
+                            </div>
+                            <div class="w-full rounded-full h-3" style="background-color: var(--border-color);">
+                                <div class="skill-bar h-3 rounded-full" style="background-color: var(--primary-color);"
+                                    data-width="70">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium" style="color: var(--text-primary);">JavaScript</span>
+                                <span style="color: var(--text-secondary);">60%</span>
+                            </div>
+                            <div class="w-full rounded-full h-3" style="background-color: var(--border-color);">
+                                <div class="skill-bar h-3 rounded-full"
+                                    style="background-color: var(--secondary-color);" data-width="60"></div>
+                            </div>
+                        </div>
+
+                        <!-- React -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium" style="color: var(--text-primary);">React</span>
+                                <span style="color: var(--text-secondary);">55%</span>
+                            </div>
+                            <div class="w-full rounded-full h-3" style="background-color: var(--border-color);">
+                                <div class="skill-bar h-3 rounded-full" style="background-color: var(--accent-color);"
+                                    data-width="55">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tailwind CSS -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium" style="color: var(--text-primary);">Tailwind CSS</span>
+                                <span style="color: var(--text-secondary);">50%</span>
+                            </div>
+                            <div class="w-full rounded-full h-3" style="background-color: var(--border-color);">
+                                <div class="skill-bar h-3 rounded-full" style="background-color: var(--primary-light);"
+                                    data-width="50">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Node.js / Express.js -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium" style="color: var(--text-primary);">Node.js /
+                                    Express.js</span>
+                                <span style="color: var(--text-secondary);">45%</span>
+                            </div>
+                            <div class="w-full rounded-full h-3" style="background-color: var(--border-color);">
+                                <div class="skill-bar h-3 rounded-full"
+                                    style="background-color: var(--secondary-light);" data-width="45"></div>
+                            </div>
+                        </div>
+
+                        <!-- MongoDB -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium" style="color: var(--text-primary);">MongoDB</span>
+                                <span style="color: var(--text-secondary);">40%</span>
+                            </div>
+                            <div class="w-full rounded-full h-3" style="background-color: var(--border-color);">
+                                <div class="skill-bar h-3 rounded-full" style="background-color: var(--accent-color);"
+                                    data-width="40">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Git / GitHub -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium" style="color: var(--text-primary);">Git / GitHub</span>
+                                <span style="color: var(--text-secondary);">55%</span>
+                            </div>
+                            <div class="w-full rounded-full h-3" style="background-color: var(--border-color);">
+                                <div class="skill-bar h-3 rounded-full" style="background-color: var(--primary-color);"
+                                    data-width="55">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VS Code -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium" style="color: var(--text-primary);">VS Code</span>
+                                <span style="color: var(--text-secondary);">65%</span>
+                            </div>
+                            <div class="w-full rounded-full h-3" style="background-color: var(--border-color);">
+                                <div class="skill-bar h-3 rounded-full"
+                                    style="background-color: var(--secondary-color);" data-width="65"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Tools & Technologies -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-8" style="color: var(--text-primary);">
+                        Tools & Technologies
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <!-- Frontend -->
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/html.jpg" alt="HTML Logo" class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">HTML</h4>
+                        </div>
+
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/CSS3 Badge with CSS text.jpg" alt="CSS Logo"
+                                    class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">CSS</h4>
+                        </div>
+
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/js.jpg" alt="JS Logo" class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">JavaScript</h4>
+                        </div>
+
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/React logo PNG.jpg" alt="React Logo" class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">React</h4>
+                        </div>
+
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/Tailwind CSS - Rapidly build modern websites without ever leaving your HTML_.jpg"
+                                    alt="Tailwind Logo" class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Tailwind CSS</h4>
+                        </div>
+
+                        <!-- Backend -->
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/Node_js Logo PNG Vector (SVG) Free Download.jpg" alt="Node.js"
+                                    class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Node.js</h4>
+                        </div>
+
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/Express JS Icon Gallery for Developers and Designers.jpg"
+                                    alt="Express.js Logo" class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Express.js</h4>
+                        </div>
+
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/mongodb_original_wordmark_logo_icon_146425.png" alt="MongoDB Logo"
+                                    class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold mt-2" style="color: var(--text-primary);">MongoDB</h4>
+                        </div>
+
+                        <!-- Tools -->
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/Git Logo (software | 01) - PNG Logo Vector Brand Downloads (SVG, EPS).jpg"
+                                    alt="Git Logo" class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">Git</h4>
+                        </div>
+
+                        <div class="p-4 rounded-lg shadow-sm text-center"
+                            style="background-color: var(--bg-secondary); border: 1px solid var(--border-color);">
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="photos/vs code.jpg" alt="VS Code Logo" class="h-full object-contain">
+                            </div>
+                            <h4 class="font-semibold" style="color: var(--text-primary);">VS Code</h4>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20" style="background-color: var(--bg-secondary);">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--text-primary);">Featured Projects</h2>
+                <div class="w-20 h-1 mx-auto" style="background-color: var(--primary-color);"></div>
+                <p class="mt-4 max-w-2xl mx-auto" style="color: var(--text-secondary);">
+                    Here are some of my recent projects that showcase my skills and experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- EDIT: Replace with your actual projects -->
+
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl shadow-lg overflow-hidden"
+                    style="background-color: var(--bg-primary); border: 1px solid var(--border-color);">
+                    <div class="h-48 flex items-center justify-center">
+                        <img src="photos/ArcadeX.jpg" alt="ArcadeX Logo" class="h-full w-full object-cover ">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--text-primary);">ArcadeX - Mini Games
+                            Collection.</h3><!-- EDIT: Project name -->
+                        <p class="mb-4" style="color: var(--text-secondary);">
+                            A lightweight arcade collection developed using HTML, CSS, and JavaScript. Provides classic
+                            games, smooth navigation,
+                            and a polished user experience.</p> <!-- EDIT: Project description -->
+
+                        <!-- EDIT: Update technologies used - THEME: Oceanic tags -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-sm rounded-full"
+                                style="background-color: var(--bg-secondary); color: var(--text-primary);">HTML</span>
+                            <span class="px-3 py-1 text-sm rounded-full"
+                                style="background-color: var(--bg-secondary); color: var(--text-primary);">CSS</span>
+                            <span class="px-3 py-1 text-sm rounded-full"
+                                style="background-color: var(--bg-secondary); color: var(--text-primary);">JavaScript</span>
+                        </div>
+
+                        <div class="flex space-x-4">
+                            <!-- EDIT: Add your project links -->
+                            <a href="https://lezinsaajid.github.io/ArcadeX/" target="_blank"
+                                class="font-medium hover:underline" style="color: var(--primary-color);">Live
+                                Demo</a>
+                            <a href="https://github.com/lezinsaajid/ArcadeX" target="_blank"
+                                class="font-medium hover:underline" style="color: var(--text-secondary);">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card rounded-xl shadow-lg overflow-hidden"
+                    style="background-color: var(--bg-primary); border: 1px solid var(--border-color);">
+                    <div class="h-48 flex items-center justify-center">
+                        <img src="photos/TrackIT.jpg" alt="TrackIt Logo" class="h-full w-full object-cover ">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--text-primary);">TrackIt - Stay organized,
+                            one task at a time.</h3>
+                        <!-- EDIT: Project name -->
+                        <p class="mb-4" style="color: var(--text-secondary);">
+                            A personal task management app with intuitive task tracking, priority labels, and seamless
+                            user switching for multiple
+                            profiles.
+                        </p> <!-- EDIT: Project description -->
+
+                        <!-- EDIT: Update technologies used -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-sm rounded-full"
+                                style="background-color: var(--bg-secondary); color: var(--text-primary);">HTML</span>
+                            <span class="px-3 py-1 text-sm rounded-full"
+                                style="background-color: var(--bg-secondary); color: var(--text-primary);">CSS</span>
+                            <span class="px-3 py-1 text-sm rounded-full"
+                                style="background-color: var(--bg-secondary); color: var(--text-primary);">JavaScript</span>
+                        </div>
+
+                        <div class="flex space-x-4">
+                            <!-- Live Demo link -->
+                            <a href="https://lezinsaajid.github.io/TrackIt---Stay-organized-one-task-at-a-time./"
+                                target="_blank" class="font-medium hover:underline"
+                                style="color: var(--primary-color);">
+                                Live Demo
+                            </a>
+
+                            <!-- GitHub repository link -->
+                            <a href="https://github.com/lezinsaajid/TrackIt---Stay-organized-one-task-at-a-time."
+                                target="_blank" class="font-medium hover:underline"
+                                style="color: var(--text-secondary);">
+                                GitHub
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card rounded-xl shadow-lg overflow-hidden"
+                    style="background-color: var(--bg-primary); border: 1px solid var(--border-color);">
+                    <div class="h-48 flex items-center justify-center">
+                        <img src="photos/SkyCast.jpg" alt="SkyCast Logo" class="h-full w-full object-cover ">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--text-primary);">SkyCast - Forcast at your
+                            Fingertips.</h3>
+                        <!-- EDIT: Project name -->
+                        <p class="mb-4" style="color: var(--text-secondary);">
+                            A weather app providing real-time forecasts, customizable alerts, and smooth switching
+                            between multiple locations for
+                            personalized weather tracking.
+                        </p> <!-- EDIT: Project description -->
+
+                        <!-- EDIT: Update technologies used -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 text-sm rounded-full"
+                                style="background-color: var(--bg-secondary); color: var(--text-primary);">HTML</span>
+                            <span class="px-3 py-1 text-sm rounded-full"
+                                style="background-color: var(--bg-secondary); color: var(--text-primary);">CSS</span>
+                            <span class="px-3 py-1 text-sm rounded-full"
+                                style="background-color: var(--bg-secondary); color: var(--text-primary);">JavaScript</span>
+                        </div>
+
+                        <div class="flex space-x-4">
+                            <!-- Live Demo link -->
+                            <a href="https://lezinsaajid.github.io/SkyCast/" target="_blank"
+                                class="font-medium hover:underline" style="color: var(--primary-color);">
+                                Live Demo
+                            </a>
+
+                            <!-- GitHub repository link -->
+                            <a href="https://github.com/lezinsaajid/SkyCast" target="_blank"
+                                class="font-medium hover:underline" style="color: var(--text-secondary);">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-align: center; margin-top: 3rem;">
+                    <!-- Link to your GitHub or portfolio -->
+                    <a href="https://github.com/lezinsaajid" target="_blank"
+                        class="btn-primary px-8 py-3 rounded-lg transition-colors inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        View All Projects
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 text-white" style="background-color: var(--bg-dark);">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 mx-auto" style="background-color: var(--text-white);"></div>
+                <p class="mt-4 max-w-2xl mx-auto" style="color: rgba(255,255,255,0.7);">
+                    I'm always interested in new opportunities and exciting projects.
+                    Let's discuss how we can work together!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-bold mb-6">Let's Connect</h3>
+
+                    <!-- EDIT: Update your contact information -->
+                    <div class="flex items-center space-x-4">
+                        <!-- THEME: Contact icons use white background -->
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center"
+                            style="background-color: var(--text-white); color: var(--primary-color);">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Email</h4>
+                            <p style="color: rgba(255,255,255,0.7);">lezinsajid@gmail.com</p> <!-- EDIT: Your email -->
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center"
+                            style="background-color: var(--text-white); color: var(--primary-color);">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Phone</h4>
+                            <p style="color: rgba(255,255,255,0.7);">+91 9562179012</p> <!-- EDIT: Your phone -->
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center"
+                            style="background-color: var(--text-white); color: var(--primary-color);">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Location</h4>
+                            <p style="color: rgba(255,255,255,0.7);">Kerala, India</p> <!-- EDIT: Your location -->
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <!-- EDIT: Update your social media links -->
+                    <div class="pt-6">
+                        <h4 class="font-semibold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <!-- THEME: Social icons use monochrome styling -->
+                            <!-- X (formerly Twitter) Link -->
+                            <a href="https://x.com/lezinsajid?s=11" target="_blank"
+                                class="w-10 h-10 rounded-lg flex items-center justify-center transition-colors"
+                                style="background-color: rgba(255,255,255,0.1); color: var(--text-white);"
+                                onmouseover="this.style.backgroundColor='var(--text-white)'; this.style.color='var(--primary-color)';"
+                                onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.color='var(--text-white)';">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                </svg>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/lezinsajid?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                target="_blank"
+                                class="w-10 h-10 rounded-lg flex items-center justify-center transition-colors"
+                                style="background-color: rgba(255,255,255,0.1); color: var(--text-white);"
+                                onmouseover="this.style.backgroundColor='var(--text-white)'; this.style.color='var(--primary-color)';"
+                                onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.color='var(--text-white)';">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                            <a href="https://github.com/lezinsaajid" target="_blank"
+                                class="w-10 h-10 rounded-lg flex items-center justify-center transition-colors"
+                                style="background-color: rgba(255,255,255,0.1); color: var(--text-white);"
+                                onmouseover="this.style.backgroundColor='var(--text-white)'; this.style.color='var(--primary-color)';"
+                                onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'; this.style.color='var(--text-white)';">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Send Message</h3>
+                    <form id="contact-form" action="https://formspree.io/f/mgvlpqrn" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2"
+                                    style="color: rgba(255,255,255,0.7);">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full rounded-lg px-4 py-3 text-white focus:ring-2 focus:border-transparent"
+                                    style="background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2"
+                                    style="color: rgba(255,255,255,0.7);">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full rounded-lg px-4 py-3 text-white focus:ring-2 focus:border-transparent"
+                                    style="background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2"
+                                style="color: rgba(255,255,255,0.7);">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full rounded-lg px-4 py-3 text-white focus:ring-2 focus:border-transparent"
+                                style="background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2"
+                                style="color: rgba(255,255,255,0.7);">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full rounded-lg px-4 py-3 text-white focus:ring-2 focus:border-transparent"
+                                style="background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 px-6 rounded-lg transition-colors font-medium"
+                            style="background-color: var(--text-white); color: var(--primary-color);"
+                            onmouseover="this.style.backgroundColor='rgba(255,255,255,0.9)';"
+                            onmouseout="this.style.backgroundColor='var(--text-white)';">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8" style="background-color: var(--primary-color); color: var(--text-white);">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <!-- EDIT: Update copyright with your name -->
+                <p style="color: rgba(255,255,255,0.7);">
+                    © 2025 Lezin Sajid. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'979b301673422fe5',t:'MTc1Njk2NDgwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>

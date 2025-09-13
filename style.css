@@ -1,0 +1,144 @@
+/* ===== OCEANIC THEME COLORS - CHANGE THESE TO MODIFY THE ENTIRE THEME ===== */
+:root {
+    /* Primary oceanic colors - Deep ocean blues and teals */
+    --primary-color: #0ea5e9;
+    /* Ocean blue - EDIT: Change to your primary color */
+    --primary-light: #38bdf8;
+    /* Light ocean blue - EDIT: Change to lighter version of primary */
+    --primary-dark: #0284c7;
+    /* Deep ocean blue - EDIT: Change to darker version of primary */
+
+    /* Secondary oceanic colors */
+    --secondary-color: #0891b2;
+    /* Teal blue - EDIT: Change to your secondary color */
+    --secondary-light: #22d3ee;
+    /* Light teal - EDIT: Change to lighter secondary */
+
+    /* Background colors - Dark oceanic theme */
+    --bg-primary: #0f172a;
+    /* Deep navy background - EDIT: Main background color */
+    --bg-secondary: #1e293b;
+    /* Slate blue background - EDIT: Secondary background */
+    --bg-dark: #020617;
+    /* Deepest ocean background - EDIT: Dark sections background */
+
+    /* Text colors for dark theme */
+    --text-primary: #f1f5f9;
+    /* Light blue-white text - EDIT: Main text color */
+    --text-secondary: #94a3b8;
+    /* Muted blue-gray text - EDIT: Secondary text color */
+    --text-light: #64748b;
+    /* Darker muted text - EDIT: Muted text color */
+    --text-white: #ffffff;
+    /* Pure white text - EDIT: Text on dark backgrounds */
+
+    /* Border and accent colors */
+    --border-color: #334155;
+    /* Dark blue-gray borders - EDIT: Border color */
+    --accent-color: #06b6d4;
+    /* Cyan accent - EDIT: Accent elements */
+}
+
+/* Custom animations and styles */
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-bar {
+    transition: width 2s ease-in-out;
+}
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    /* THEME: Uses primary color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.typing-animation {
+    border-right: 2px solid var(--primary-color);
+    /* THEME: Uses primary color */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        border-color: transparent;
+    }
+
+    51%,
+    100% {
+        border-color: var(--primary-color);
+    }
+
+    /* THEME: Uses primary color */
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom oceanic gradient background - THEME: Deep ocean gradient */
+.gradient-bg {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 30%, #1e293b 70%, #0ea5e9 100%);
+    /* EDIT THEME: Oceanic gradient from deepest ocean to surface blue */
+}
+
+/* Monochrome button styles - THEME: Button color variations */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
