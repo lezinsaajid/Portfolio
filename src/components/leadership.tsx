@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Section, PageContainer, CenteredHeader } from "@/components/layout";
+import { typography, spacing, container } from "@/lib/design-tokens";
+import { staggeredFadeInUp } from "@/lib/motion";
 
 // ============================================
 // EDITORIAL LEADERSHIP SECTION
@@ -49,73 +52,39 @@ const leadership = [
 
 export default function Leadership() {
   return (
-    <section id="leadership" className="py-32 md:py-48 px-6 md:px-12 lg:px-20">
-      {/* ============================================
-          EDITORIAL PHILOSOPHY-FIRST LAYOUT
-          - Philosophy statement as hero
-          - Roles as supporting content
-          - Different from all previous sections
-          ============================================ */}
-      <div className="max-w-[1600px] mx-auto">
-        
-        {/* ===============================================
-            PHILOSOPHY STATEMENT - Full-width hero
-            - Large serif typography
-            - Centered, editorial
-            - No section number
-            =============================================== */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-center mb-32 md:mb-48"
-        >
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 max-w-4xl mx-auto leading-tight">
-            I believe leadership is about enabling others to do their best work. It's not about being the smartest person in the room—it's about creating an environment where everyone can contribute meaningfully.
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-light">
-            My approach combines clear communication, stakeholder alignment, and ownership of outcomes. Whether leading a 30+ member innovation cell or managing client relationships, I focus on building trust, setting clear expectations, and delivering results that matter.
-          </p>
+    <Section id="leadership">
+      <PageContainer>
+        <motion.div {...staggeredFadeInUp(0)}>
+          <div className="text-center mb-16 md:mb-20 lg:mb-32 xl:mb-48">
+            <h2 className={`${typography.display.section} ${typography.fontFamily.serif} text-foreground mb-6 sm:mb-8 ${container.wide} mx-auto ${typography.lineHeight.normal}`}>
+              I believe leadership is about enabling others to do their best work. It's not about being the smartest person in the room—it's about creating an environment where everyone can contribute meaningfully.
+            </h2>
+            <p className={`${typography.body.base} text-muted-foreground ${container.normal} mx-auto ${typography.fontWeight.light}`}>
+              My approach combines clear communication, stakeholder alignment, and ownership of outcomes. Whether leading a 30+ member innovation cell or managing client relationships, I focus on building trust, setting clear expectations, and delivering results that matter.
+            </p>
+          </div>
         </motion.div>
 
-        {/* ===============================================
-            LEADERSHIP ROLES - Minimal list
-            - No cards, just typography
-            - Centered for editorial feel
-            - Different from experience section
-            =============================================== */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-          className="max-w-4xl mx-auto"
-        >
-          <div className="space-y-16 md:space-y-20">
+        <motion.div {...staggeredFadeInUp(0.2)} className="mx-auto max-w-4xl">
+          <div className={spacing.content.loose}>
             {leadership.map((item, index) => (
               <motion.div
                 key={`${item.organization}-${item.role}`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
+                {...staggeredFadeInUp(index * 0.1)}
                 className="text-center"
               >
-                {/* Role and organization */}
-                <div className="mb-6">
-                  <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-2">
+                <div className="mb-4 sm:mb-6">
+                  <h3 className={`${typography.heading.h3} text-foreground mb-2`}>
                     {item.role}
                   </h3>
-                  <p className="text-base text-muted-foreground">
+                  <p className={`${typography.body.small} text-muted-foreground`}>
                     {item.organization} · {item.period}
                   </p>
                 </div>
 
-                {/* Highlights - minimal list */}
-                <div className="space-y-3 max-w-2xl mx-auto">
+                <div className={spacing.content.tight}>
                   {item.highlights.map((highlight, i) => (
-                    <p key={i} className="text-sm text-muted-foreground leading-relaxed font-light">
+                    <p key={i} className={`${typography.body.xsmall} text-muted-foreground ${typography.lineHeight.relaxed} ${typography.fontWeight.light}`}>
                       {highlight}
                     </p>
                   ))}
@@ -124,7 +93,7 @@ export default function Leadership() {
             ))}
           </div>
         </motion.div>
-      </div>
-    </section>
+      </PageContainer>
+    </Section>
   );
 }

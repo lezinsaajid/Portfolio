@@ -1,121 +1,107 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-// ============================================
-// EDITORIAL CONTACT SECTION
-// Minimal typography-focused layout
-// Edit this section to change:
-// - Contact links (email, LinkedIn, GitHub)
-// - Location and availability text
-// ============================================
+import { Section, PageContainer, SplitLayout, SectionHeader } from "@/components/layout";
+import { typography, spacing, container } from "@/lib/design-tokens";
+import { fadeInLeft, staggeredFadeInUp } from "@/lib/motion";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 md:py-48 px-6 md:px-12 lg:px-20">
-      {/* ============================================
-          EDITORIAL CENTERED LAYOUT
-          - Minimal, elegant presentation
-          - No cards, just typography
-          - Different from all previous sections
-          ============================================ */}
-      <div className="max-w-[1600px] mx-auto">
-        
-        {/* ===============================================
-            SECTION HEADER - Large serif typography
-            - Centered, editorial
-            - No section number
-            =============================================== */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="text-center mb-24 md:mb-32"
-        >
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-foreground mb-6">
-            Let's Connect
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light">
-            Open to conversations about products, AI, and opportunities
-          </p>
-        </motion.div>
+    <Section id="contact">
+      <PageContainer>
+        <div className="border-t border-border pt-16 md:pt-20 lg:pt-24">
+          <SplitLayout
+            leftWidth="narrow"
+            leftColumn={
+              <motion.div {...fadeInLeft}>
+                <SectionHeader number="06" title="Connect" />
+              </motion.div>
+            }
+            rightColumn={
+              <motion.div {...fadeInLeft} transition={{ delay: 0.2 }}>
+                <div className={spacing.content.normal}>
+                  <p
+                    className={`${typography.label.base} ${typography.label.tracking} text-muted-foreground`}
+                  >
+                    Let&apos;s Connect
+                  </p>
 
-        {/* ===============================================
-            CONTACT LINKS - Minimal list
-            - No cards, just typography
-            - Centered for editorial feel
-            =============================================== */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-          className="max-w-3xl mx-auto"
-        >
-          <div className="space-y-8 mb-16">
-            <a
-              href="mailto:lezinsajid@gmail.com"
-              className="group block text-center"
-            >
-              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-2 group-hover:text-accent transition-colors duration-700">
+                  <h2
+                    className={`${typography.display.section} ${typography.fontFamily.serif} ${typography.lineHeight.normal} text-foreground`}
+                  >
+                    Let&apos;s build products
+                    <br />
+                    people actually enjoy using.
+                  </h2>
+
+                  <p
+                    className={`${typography.body.base} text-muted-foreground ${typography.lineHeight.relaxed} ${typography.fontWeight.light} ${container.reading}`}
+                  >
+                    I&apos;m looking for opportunities in Associate Product
+                    Management, Product Strategy, Product Operations, and AI
+                    Product roles. If you&apos;re building something meaningful,
+                    I&apos;d love to talk.
+                  </p>
+
+                  <a
+                    href="mailto:lezinsajid@gmail.com"
+                    className="group relative inline-flex items-center gap-4 text-foreground pb-1"
+                  >
+                    <span className={typography.label.base}>Get in touch</span>
+                    <span className="w-12 h-px bg-foreground group-hover:bg-accent group-hover:translate-x-1 transition-all duration-700" />
+                  </a>
+                </div>
+              </motion.div>
+            }
+          />
+        </div>
+
+        <footer className="border-t border-border py-10 mt-16 md:mt-20">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-10">
+            <div>
+              <p className={`${typography.body.xsmall} text-muted-foreground`}>
+                © 2026 Lezin Sajid
+              </p>
+              <p className={`${typography.body.xsmall} text-muted-foreground mt-1`}>
+                Bengaluru, India
+              </p>
+            </div>
+
+            <div className={`flex flex-wrap ${spacing.element.lg} ${typography.body.xsmall}`}>
+              <a
+                href="mailto:lezinsajid@gmail.com"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-700"
+              >
                 Email
-              </h3>
-              <p className="text-base text-muted-foreground font-light">
-                lezinsajid@gmail.com
-              </p>
-            </a>
-
-            <a
-              href="https://linkedin.com/in/lezinsajid"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block text-center"
-            >
-              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-2 group-hover:text-accent transition-colors duration-700">
+              </a>
+              <a
+                href="https://linkedin.com/in/lezinsajid"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-700"
+              >
                 LinkedIn
-              </h3>
-              <p className="text-base text-muted-foreground font-light">
-                Connect professionally
-              </p>
-            </a>
-
-            <a
-              href="https://github.com/lezinsajid"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block text-center"
-            >
-              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-2 group-hover:text-accent transition-colors duration-700">
+              </a>
+              <a
+                href="https://github.com/lezinsajid"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-700"
+              >
                 GitHub
-              </h3>
-              <p className="text-base text-muted-foreground font-light">
-                View my code
-              </p>
-            </a>
+              </a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-700"
+              >
+                Resume
+              </a>
+            </div>
           </div>
-
-          {/* ===============================================
-              LOCATION AND AVAILABILITY
-              - Centered text
-              - Minimal presentation
-              =============================================== */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-            className="text-center space-y-4"
-          >
-            <p className="text-base text-muted-foreground font-light">
-              Based in Bengaluru, India · Open to relocation
-            </p>
-            <p className="text-sm text-muted-foreground/70 font-light">
-              Currently exploring opportunities at the intersection of technology, business, and AI
-            </p>
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
+        </footer>
+      </PageContainer>
+    </Section>
   );
 }

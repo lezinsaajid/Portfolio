@@ -1,10 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Section, PageContainer, SplitLayout, SectionHeader } from "@/components/layout";
+import { typography, spacing, container } from "@/lib/design-tokens";
+import { fadeInLeft, staggeredFadeInUp } from "@/lib/motion";
 
 // ============================================
 // EDITORIAL CERTIFICATIONS SECTION
-// Minimal list with emphasis on issuer
+// Trimmed to PM-relevant credentials only
 // Edit this section to change:
 // - Certification names and issuers
 // - Dates and descriptions
@@ -17,144 +20,67 @@ const certifications = [
     issuer: "Anthropic",
     date: "Jun 2026",
     credential: "https://www.anthropic.com",
-    description: "Comprehensive understanding of AI systems, capabilities, limitations, and ethical considerations. Applied directly in production applications."
+    description: "Comprehensive understanding of AI systems, capabilities, limitations, and ethical considerations. Applied directly in product decisions — evaluating where AI adds genuine user value versus where it's unnecessary complexity."
   },
   {
     name: "Claude 101 — Prompt Engineering",
     issuer: "Anthropic",
     date: "Jun 2026",
     credential: "https://www.anthropic.com",
-    description: "Advanced prompt engineering techniques for optimizing LLM interactions. Applied in DollarDairy for natural language finance queries."
-  },
-  {
-    name: "One Million Prompters",
-    issuer: "Anthropic / UAE AI Initiative",
-    date: "2026",
-    credential: "#",
-    description: "Part of global initiative to train one million people in AI prompt engineering and responsible AI usage."
+    description: "Advanced prompt engineering techniques for optimizing LLM interactions. Applied in DollarDairy for natural language finance queries — designing prompts that translate user questions into accurate database queries."
   },
   {
     name: "SQL (Advanced)",
     issuer: "HackerRank",
     date: "Jun 2026",
     credential: "https://www.hackerrank.com",
-    description: "Advanced SQL skills including complex queries, joins, subqueries, and database optimization. Applied in analytics dashboards and business reporting."
-  },
-  {
-    name: "SQL (Basic)",
-    issuer: "HackerRank",
-    date: "Jun 2026",
-    credential: "https://www.hackerrank.com",
-    description: "Foundational SQL knowledge including SELECT, INSERT, UPDATE, DELETE operations and basic database design."
-  },
-  {
-    name: "Problem Solving (Intermediate)",
-    issuer: "HackerRank",
-    date: "Jun 2026",
-    credential: "https://www.hackerrank.com",
-    description: "Intermediate algorithmic problem-solving skills with focus on data structures and algorithms."
-  },
-  {
-    name: "Foundational C# with Microsoft",
-    issuer: "freeCodeCamp",
-    date: "Nov 2025",
-    credential: "https://www.freecodecamp.org",
-    description: "Foundational C# programming concepts including object-oriented programming, .NET framework basics, and application development."
+    description: "Advanced SQL including complex joins, subqueries, window functions, and query optimization. The foundation for data-driven product decisions, analytics dashboards, and impact measurement."
   }
 ];
 
+// Education — compact display
+const education = {
+  degree: "Bachelor of Technology — Computer Science & Engineering",
+  institution: "Government Engineering College, Wayanad, Kerala",
+  year: "May 2026",
+  gpa: "CGPA: 8.34 / 10.0"
+};
+
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-32 md:py-48 px-6 md:px-12 lg:px-20">
-      {/* ============================================
-          EDITORIAL TWO-COLUMN LAYOUT
-          - Left: Section number and title
-          - Right: Certifications grouped by issuer
-          - Different from previous sections
-          ============================================ */}
-      <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-12 gap-8 md:gap-16">
-          
-          {/* ===============================================
-              LEFT COLUMN: SECTION NUMBER & TITLE (2 columns)
-              - Minimal editorial
-              =============================================== */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="col-span-12 md:col-span-2 sticky top-32 h-fit"
-          >
-            <div className="space-y-4">
-              <span className="font-serif text-6xl md:text-7xl text-muted-foreground/30">04</span>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground leading-tight">
-                Credentials
-              </h2>
-            </div>
-          </motion.div>
-
-          {/* ===============================================
-              RIGHT COLUMN: CERTIFICATIONS (10 columns)
-              - Grouped by issuer
-              - Minimal presentation
-              - No cards, just typography
-              =============================================== */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-            className="col-span-12 md:col-span-10"
-          >
-            <div className="space-y-20">
-              {/* Group by issuer */}
-              {[
-                {
-                  issuer: "Anthropic",
-                  certs: certifications.filter(c => c.issuer.includes("Anthropic"))
-                },
-                {
-                  issuer: "HackerRank",
-                  certs: certifications.filter(c => c.issuer.includes("HackerRank"))
-                },
-                {
-                  issuer: "Other",
-                  certs: certifications.filter(c => !c.issuer.includes("Anthropic") && !c.issuer.includes("HackerRank"))
-                }
-              ].map((group, groupIndex) => (
-                <motion.div
-                  key={group.issuer}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 1, delay: groupIndex * 0.15, ease: "easeOut" }}
-                >
-                  {/* Issuer header */}
-                  <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-8">
-                    {group.issuer}
-                  </h3>
-
-                  {/* Certifications for this issuer */}
-                  <div className="space-y-8">
-                    {group.certs.map((cert, certIndex) => (
+    <Section id="credentials">
+      <PageContainer>
+        <SplitLayout 
+          leftWidth="narrow"
+          leftColumn={
+            <motion.div {...fadeInLeft}>
+              <SectionHeader number="05" title="Credentials" />
+            </motion.div>
+          }
+          rightColumn={
+            <motion.div {...fadeInLeft} transition={{ delay: 0.2 }}>
+              <div className={spacing.content.xl}>
+                {/* ===============================================
+                    CERTIFICATIONS
+                    Only PM-relevant credentials displayed
+                    =============================================== */}
+                <motion.div {...staggeredFadeInUp(0)}>
+                  <div className={spacing.content.normal}>
+                    {certifications.map((cert, certIndex) => (
                       <motion.div
                         key={cert.name}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.8, delay: certIndex * 0.05, ease: "easeOut" }}
+                        {...staggeredFadeInUp(certIndex * 0.1)}
                         className="group"
                       >
-                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 sm:gap-4">
                           <div className="flex-1">
-                            <h4 className="text-lg md:text-xl text-foreground mb-2 group-hover:text-accent transition-colors duration-700">
+                            <h4 className={`${typography.body.base} text-foreground mb-1 group-hover:text-accent transition-colors duration-700`}>
                               {cert.name}
                             </h4>
-                            <p className="text-sm text-muted-foreground mb-3">
-                              {cert.date}
+                            <p className={`${typography.body.xsmall} text-muted-foreground mb-2 sm:mb-3`}>
+                              {cert.issuer} · {cert.date}
                             </p>
-                            <p className="text-base text-muted-foreground leading-relaxed font-light max-w-2xl">
+                            <p className={`${typography.body.small} text-muted-foreground ${typography.lineHeight.relaxed} ${typography.fontWeight.light} ${container.normal}`}>
                               {cert.description}
                             </p>
                           </div>
@@ -163,7 +89,7 @@ export default function Certifications() {
                               href={cert.credential}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-accent transition-colors duration-700 whitespace-nowrap"
+                              className={`${typography.label.base} text-muted-foreground hover:text-accent transition-colors duration-700 whitespace-nowrap`}
                             >
                               View
                             </a>
@@ -173,11 +99,34 @@ export default function Certifications() {
                     ))}
                   </div>
                 </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
+
+                {/* ===============================================
+                    EDUCATION — Compact display
+                    =============================================== */}
+                <motion.div
+                  {...staggeredFadeInUp(0.3)}
+                  className="pt-4 sm:pt-6 border-t border-border/50"
+                >
+                  <p className={`${typography.label.base} text-muted-foreground mb-6 sm:mb-8`}>
+                    Education
+                  </p>
+                  <div>
+                    <h4 className={`${typography.body.base} text-foreground mb-1`}>
+                      {education.degree}
+                    </h4>
+                    <p className={`${typography.body.xsmall} text-muted-foreground mb-1`}>
+                      {education.institution}
+                    </p>
+                    <p className={`${typography.body.xsmall} text-muted-foreground/70`}>
+                      {education.year} · {education.gpa}
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          }
+        />
+      </PageContainer>
+    </Section>
   );
 }

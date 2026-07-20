@@ -1,86 +1,91 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-// ============================================
-// EDITORIAL ABOUT SECTION
-// Split layout with large typography
-// Edit this section to change:
-// - Bio text and paragraphs
-// - Section title
-// ============================================
+import { Section, PageContainer, SplitLayout, SectionHeader } from "@/components/layout";
+import { typography, spacing } from "@/lib/design-tokens";
+import { fadeInLeft, staggeredFadeInUp } from "@/lib/motion";
 
 const bio = [
-  "I don't just write code—I build products. My approach starts with understanding the problem deeply before touching a single line of implementation. I believe the best solutions emerge from the intersection of user needs, business constraints, and technical feasibility.",
-  "Ambiguity doesn't paralyze me; it energizes me. In every role—from early-stage startups to student leadership—I've thrived in environments where the path isn't clearly defined. I enjoy mapping out the terrain, making decisions with incomplete information, and iterating rapidly based on feedback.",
-  "What motivates me is the journey from idea to impact. There's something deeply satisfying about taking a concept, wrestling with the complexities, and shipping something that real people use. This is why I've built three production-ready applications solo—not because I had to, but because I couldn't not build them.",
-  "I'm particularly drawn to AI not as a buzzword, but as a tool that amplifies human capability. My certification from Anthropic isn't just a credential—it's a framework I apply daily to solve real problems, from automating workflows to building intelligent features that make products more valuable.",
-  "Ultimately, I see myself as a bridge between technology and business. I speak the language of engineers and the language of stakeholders. I can dive into the code, but I can also step back and ask: 'Is this the right problem to solve? Is this the best way to solve it? What's the ROI?'"
+  "I build products by starting with the problem — understanding users, defining what matters, and turning ideas into shipped experiences. My technical background helps me work closely with engineers, evaluate trade-offs, and make decisions grounded in both user needs and technical reality.",
+
+  "I've built and shipped three products independently, from identifying opportunities to deployment. With Ascendra, an AI-powered career platform, I explored how AI could reduce friction in the job search journey. Across projects and early-stage experiences, I have consistently focused on one question: are we solving the right problem?",
+
+  "I thrive in ambiguous environments where problems are not clearly defined. Through solo products, leadership roles, and startup experiences, I've learned to break down uncertainty, prioritize impact, and iterate quickly based on feedback and evidence."
+];
+
+const principles = [
+  {
+    label: "Problem First",
+    detail: "Start with understanding the user, context, and underlying problem before jumping into solutions."
+  },
+  {
+    label: "Build & Learn",
+    detail: "Ship focused solutions, measure outcomes, and continuously improve through real feedback."
+  },
+  {
+    label: "AI as Leverage",
+    detail: "Use AI thoughtfully to improve workflows, unlock capabilities, and create meaningful user value."
+  },
+  {
+    label: "Evidence Over Assumptions",
+    detail: "Balance intuition with data, constraints, and clear reasoning when making product decisions."
+  }
 ];
 
 export default function About() {
   return (
-    <section id="about" className="py-32 md:py-48 px-6 md:px-12 lg:px-20">
-      {/* ============================================
-          EDITORIAL SPLIT LAYOUT
-          - Left: Large section number and title
-          - Right: Bio content
-          - Asymmetrical for visual interest
-          ============================================ */}
-      <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-12 gap-8 md:gap-16">
-          
-          {/* ===============================================
-              LEFT COLUMN: SECTION NUMBER & TITLE (3 columns)
-              - Large editorial numbering
-              - Serif typography
-              - Fixed position feel
-              =============================================== */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="col-span-12 md:col-span-3 sticky top-32 h-fit"
-          >
-            <div className="space-y-4">
-              <span className="font-serif text-6xl md:text-7xl text-muted-foreground/30">01</span>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground leading-tight">
-                How I Think
-              </h2>
-            </div>
-          </motion.div>
+    <Section id="about">
+      <PageContainer>
+        <SplitLayout
+          leftWidth="medium"
+          leftColumn={
+            <motion.div {...fadeInLeft}>
+              <SectionHeader number="01" title="How I Think" />
+            </motion.div>
+          }
+          rightColumn={
+            <motion.div {...fadeInLeft} transition={{ delay: 0.2 }}>
+              <div className={spacing.content.loose}>
+                {bio.map((paragraph, index) => (
+                  <motion.p
+                    key={index}
+                    {...staggeredFadeInUp(index * 0.15)}
+                    className={`${typography.body.large} text-muted-foreground ${typography.lineHeight.relaxed} ${typography.fontWeight.light}`}
+                  >
+                    {paragraph}
+                  </motion.p>
+                ))}
 
-          {/* ===============================================
-              RIGHT COLUMN: BIO CONTENT (9 columns)
-              - Large editorial typography
-              - Generous line height
-              - Staggered paragraph reveals
-              =============================================== */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-            className="col-span-12 md:col-span-9"
-          >
-            <div className="space-y-12 md:space-y-16">
-              {bio.map((paragraph, index) => (
-                <motion.p
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 1, delay: index * 0.15, ease: "easeOut" }}
-                  className="text-xl md:text-2xl lg:text-3xl text-muted-foreground leading-relaxed font-light max-w-4xl"
+                <motion.div
+                  {...staggeredFadeInUp(0.5)}
+                  className="pt-4 sm:pt-6 md:pt-8 border-t border-border/50"
                 >
-                  {paragraph}
-                </motion.p>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
+                  <p className={`${typography.label.base} text-muted-foreground mb-6 sm:mb-8`}>
+                    How I Work
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                    {principles.map((principle, index) => (
+                      <motion.div
+                        key={principle.label}
+                        {...staggeredFadeInUp(0.6 + index * 0.1)}
+                      >
+                        <h4 className={`${typography.body.base} text-foreground mb-2`}>
+                          {principle.label}
+                        </h4>
+
+                        <p className={`${typography.body.xsmall} text-muted-foreground ${typography.lineHeight.relaxed} ${typography.fontWeight.light}`}>
+                          {principle.detail}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          }
+        />
+      </PageContainer>
+    </Section>
   );
 }

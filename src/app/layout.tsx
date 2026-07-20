@@ -20,16 +20,16 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Lezin Sajid | AI-Fluent Product Builder",
-  description: "AI-Fluent Product Builder, Business Analyst, and Strategy & Operations professional. Building products at the intersection of technology, business, and AI. Anthropic certified in AI Fluency and Prompt Engineering.",
-  keywords: ["Product Builder", "AI", "Business Analyst", "Strategy", "Operations", "SaaS", "Anthropic Certified", "Prompt Engineering", "Full Stack Developer"],
+  title: "Lezin Sajid | Product Manager · AI-Fluent · Bengaluru",
+  description: "Product-oriented problem solver with a technical foundation. Shipped 3 products from problem discovery through deployment. Anthropic certified in AI Fluency and Prompt Engineering. Seeking Associate PM, Product Analyst, and AI Product roles.",
+  keywords: ["Associate Product Manager", "Product Analyst", "Product Operations", "AI Product", "Business Analyst", "AI Fluency", "Anthropic Certified", "Prompt Engineering", "SaaS", "Product Thinking"],
   authors: [{ name: "Lezin Sajid" }],
   creator: "Lezin Sajid",
   publisher: "Lezin Sajid",
   metadataBase: new URL("https://lezinsajid.com"),
   openGraph: {
-    title: "Lezin Sajid | AI-Fluent Product Builder",
-    description: "AI-Fluent Product Builder, Business Analyst, and Strategy & Operations professional. Building products at the intersection of technology, business, and AI.",
+    title: "Lezin Sajid | Product Manager · AI-Fluent · Bengaluru",
+    description: "Product-oriented problem solver with a technical foundation. Shipped 3 products from problem discovery through deployment. Anthropic certified. Seeking Associate PM and Product Analyst roles.",
     type: "website",
     locale: "en_US",
     siteName: "Lezin Sajid",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lezin Sajid | AI-Fluent Product Builder",
-    description: "AI-Fluent Product Builder, Business Analyst, and Strategy & Operations professional. Building products at the intersection of technology, business, and AI.",
+    title: "Lezin Sajid | Product Manager · AI-Fluent · Bengaluru",
+    description: "Product-oriented problem solver with a technical foundation. Shipped 3 products from problem discovery through deployment. Anthropic certified. Seeking Associate PM and Product Analyst roles.",
     creator: "@lezinsajid",
   },
   robots: {
@@ -51,9 +51,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "your-google-verification-code",
   },
 };
 

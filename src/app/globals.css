@@ -1,46 +1,50 @@
 @import "tailwindcss";
 
 :root {
+  /* Layout — single source for page rhythm */
+  --page-max-width: 1400px;
+  --page-gutter: clamp(1rem, 3.5vw, 5rem);
+
   /* ============================================
-     LUXURY EDITORIAL COLOR PALETTE
-     Primary Background: #F8F2EC (warm cream)
-     Primary Accent: #59171B (deep burgundy)
-     Accent Gradient: #59171B -> #8A3C41
-     Text: #241D1A (dark brown)
-     Muted: #7C6E66 (warm gray)
-     Cards: #FFF9F5 (off-white)
-     Borders: #E3D7CF (soft brown)
+     TWILIGHT OCEAN & SAGE GARDEN PALETTE
+     Primary Background: #F5F6F5 (pale mist)
+     Primary Accent: #3E5C4E (deep sage)
+     Accent Gradient: #3E5C4E -> #223A30
+     Text: #121B18 (deep pine)
+     Muted: #EAECEB (warm light gray)
+     Cards: #FFFFFF (white)
+     Borders: #D5DAD8 (soft slate gray)
      ============================================ */
-  --background: #F8F2EC;
-  --foreground: #241D1A;
-  --accent: #59171B;
-  --accent-light: #8A3C41;
-  --accent-gradient: linear-gradient(135deg, #59171B 0%, #8A3C41 100%);
-  --muted: #F0EBE5;
-  --muted-foreground: #7C6E66;
-  --border: #E3D7CF;
-  --card: #FFF9F5;
-  --card-foreground: #241D1A;
+  --background: #F5F6F5;
+  --foreground: #121B18;
+  --accent: #3E5C4E;
+  --accent-light: #547967;
+  --accent-gradient: linear-gradient(135deg, #3E5C4E 0%, #223A30 100%);
+  --muted: #EAECEB;
+  --muted-foreground: #586B63;
+  --border: #D5DAD8;
+  --card: #FFFFFF;
+  --card-foreground: #121B18;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* ============================================
-       DARK MODE - Luxury editorial dark theme
-       Background: Deep charcoal
-       Accent: #59171B (burgundy)
-       Text: Warm off-white
+       DARK MODE - Twilight Ocean & Sage Garden theme
+       Background: Deep twilight blue-grey (#0A1118)
+       Accent: #8CA595 (light sage green)
+       Text: Warm mist/sand (#F4F7F6)
        ============================================ */
-    --background: #1A1614;
-    --foreground: #F5F0EB;
-    --accent: #59171B;
-    --accent-light: #8A3C41;
-    --accent-gradient: linear-gradient(135deg, #59171B 0%, #8A3C41 100%);
-    --muted: #2A2420;
-    --muted-foreground: #9C9088;
-    --border: #3D3530;
-    --card: #241D1A;
-    --card-foreground: #F5F0EB;
+    --background: #0A1118;
+    --foreground: #F4F7F6;
+    --accent: #8CA595;
+    --accent-light: #A8BDB1;
+    --accent-gradient: linear-gradient(135deg, #8CA595 0%, #4D6A5A 100%);
+    --muted: #14222E;
+    --muted-foreground: #8CA1AF;
+    --border: #1F3140;
+    --card: #0D1924;
+    --card-foreground: #F4F7F6;
   }
 }
 
@@ -75,6 +79,14 @@ body {
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Centered page shell — shared by all sections */
+.page-container {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
 }
 
 ::selection {
