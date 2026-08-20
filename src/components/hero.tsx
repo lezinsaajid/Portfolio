@@ -104,17 +104,29 @@ export default function Hero() {
                 </a>
                 <a
                   href="/resume.pdf"
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-4 text-foreground pb-1"
                 >
                   <span className={typography.label.base}>Resume</span>
                   <span className="w-12 h-px bg-foreground group-hover:bg-accent transition-colors duration-700" />
                 </a>
                 <a
-                  href="#contact"
+                  href="https://linkedin.com/in/lezinsajid"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-4 text-foreground pb-1"
                 >
-                  <span className={typography.label.base}>Contact</span>
+                  <span className={typography.label.base}>LinkedIn</span>
+                  <span className="w-12 h-px bg-foreground group-hover:bg-accent transition-colors duration-700" />
+                </a>
+                <a
+                  href="https://github.com/lezinsaajid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center gap-4 text-foreground pb-1"
+                >
+                  <span className={typography.label.base}>GitHub</span>
                   <span className="w-12 h-px bg-foreground group-hover:bg-accent transition-colors duration-700" />
                 </a>
               </motion.div>
@@ -132,32 +144,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Social links — aligned to container gutter, not viewport edge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 1.8 }}
-          className="mt-10 md:mt-14 flex flex-row md:flex-col gap-4 md:gap-6"
-        >
-          <a
-            href="https://linkedin.com/in/lezinsajid"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit LinkedIn profile"
-            className={`${typography.label.base} text-muted-foreground hover:text-foreground transition-colors duration-700`}
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/lezinsaajid"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit GitHub profile"
-            className={`${typography.label.base} text-muted-foreground hover:text-foreground transition-colors duration-700`}
-          >
-            GitHub
-          </a>
-        </motion.div>
+
       </PageContainer>
     </section>
   );

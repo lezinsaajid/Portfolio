@@ -18,19 +18,19 @@ const capabilities = [
     title: "Product Thinking",
     description: "I start with the problem, not the solution. Before writing a single line of code or spec, I ask: who has this problem, how painful is it, and what's the smallest thing we can build to learn if our approach works?",
     evidence: "Identified job seeker workflow fragmentation and built Ascendra to solve it. Identified spending tracking friction and built DollarDairy around conversational queries. Each product started with a problem, not a technology.",
-    outcome: "Three products shipped from problem identification through scoping, architecture, and deployment."
+    outcome: "Four products and platforms shipped from problem identification through scoping, architecture, and deployment."
   },
   {
     title: "AI Product Fluency",
-    description: "Anthropic certified in AI Fluency and Prompt Engineering. I understand LLM capabilities, limitations, and cost structures well enough to make informed build-vs-buy decisions and design AI features that provide genuine user value.",
-    evidence: "Integrated Claude API in DollarDairy for natural language finance queries — choosing API integration over custom NLP based on accuracy requirements and time-to-validation. Designed AI-assisted qualification workflow at Admigo.",
-    outcome: "Built AI-powered features in production applications. Can evaluate where AI adds real value versus where it's a feature checkbox."
+    description: "AI-fluent in Prompt Engineering and LLM architectures. I understand LLM capabilities, limitations, and cost structures well enough to make informed build-vs-buy decisions and design AI features that provide genuine user value.",
+    evidence: "Integrated Google's Gemini API in DollarDairy for natural language finance queries — choosing API integration over custom NLP based on accuracy, rate limits, and time-to-validation. Designed AI-assisted qualification workflow at Admigo.",
+    outcome: "Built conversational, AI-powered interfaces in production applications. Can evaluate where AI adds real value versus where it's a checkbox."
   },
   {
     title: "Business & Data Analysis",
     description: "I gather requirements, identify process gaps, and translate data into decisions. SQL-proficient for querying, comfortable building dashboards, and experienced in translating campaign and pipeline data into actionable recommendations.",
-    evidence: "At Admigo, identified that manual screening consumed 3-5 hours weekly of founder time on non-converting inquiries. At Nomad Gifts, analyzed influencer campaign data to identify which creator segments drove highest engagement per rupee.",
-    outcome: "SQL Advanced certified. Consistently used data to drive operational and product decisions."
+    evidence: "Built an interactive Tableau and SQL dashboard for CRM Sales Pipeline Analysis. At Nomad Gifts, analyzed influencer campaign data to identify high-performing creator segments. At Admigo, built qualification systems to streamline screening operations.",
+    outcome: "SQL and Tableau proficient. Consistently used data to drive operational and product decisions."
   },
   {
     title: "Stakeholder Management & Execution",

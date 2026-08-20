@@ -14,12 +14,12 @@ export default function Contact() {
             leftWidth="narrow"
             leftColumn={
               <motion.div {...fadeInLeft}>
-                <SectionHeader number="06" title="Connect" />
+                <SectionHeader number="07" title="Connect" />
               </motion.div>
             }
             rightColumn={
               <motion.div {...fadeInLeft} transition={{ delay: 0.2 }}>
-                <div className={spacing.content.normal}>
+                <div className={`${spacing.content.normal} max-w-2xl`}>
                   <p
                     className={`${typography.label.base} ${typography.label.tracking} text-muted-foreground`}
                   >
@@ -56,18 +56,18 @@ export default function Contact() {
           />
         </div>
 
-        <footer className="border-t border-border py-10 mt-16 md:mt-20">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-10">
-            <div>
-              <p className={`${typography.body.xsmall} text-muted-foreground`}>
+        <footer className="border-t border-border py-12 md:py-16 mt-16 md:mt-20">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-12">
+            <div className="space-y-2">
+              <p className={`${typography.body.small} text-muted-foreground`}>
                 © 2026 Lezin Sajid
               </p>
-              <p className={`${typography.body.xsmall} text-muted-foreground mt-1`}>
+              <p className={`${typography.body.xsmall} text-muted-foreground/70`}>
                 Bengaluru, India
               </p>
             </div>
 
-            <div className={`flex flex-wrap ${spacing.element.lg} ${typography.body.xsmall}`}>
+            <div className={`flex flex-wrap gap-6 md:gap-8 ${typography.body.small}`}>
               <a
                 href="mailto:lezinsajid@gmail.com"
                 className="text-muted-foreground hover:text-foreground transition-colors duration-700"
@@ -83,7 +83,7 @@ export default function Contact() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/lezinsajid"
+                href="https://github.com/lezinsaajid"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors duration-700"

@@ -38,14 +38,6 @@ const certifications = [
   }
 ];
 
-// Education — compact display
-const education = {
-  degree: "Bachelor of Technology — Computer Science & Engineering",
-  institution: "Government Engineering College, Wayanad, Kerala",
-  year: "May 2026",
-  gpa: "CGPA: 8.34 / 10.0"
-};
-
 export default function Certifications() {
   return (
     <Section id="credentials">
@@ -54,7 +46,7 @@ export default function Certifications() {
           leftWidth="narrow"
           leftColumn={
             <motion.div {...fadeInLeft}>
-              <SectionHeader number="05" title="Credentials" />
+              <SectionHeader number="06" title="Credentials" />
             </motion.div>
           }
           rightColumn={
@@ -97,29 +89,6 @@ export default function Certifications() {
                         </div>
                       </motion.div>
                     ))}
-                  </div>
-                </motion.div>
-
-                {/* ===============================================
-                    EDUCATION — Compact display
-                    =============================================== */}
-                <motion.div
-                  {...staggeredFadeInUp(0.3)}
-                  className="pt-4 sm:pt-6 border-t border-border/50"
-                >
-                  <p className={`${typography.label.base} text-muted-foreground mb-6 sm:mb-8`}>
-                    Education
-                  </p>
-                  <div>
-                    <h4 className={`${typography.body.base} text-foreground mb-1`}>
-                      {education.degree}
-                    </h4>
-                    <p className={`${typography.body.xsmall} text-muted-foreground mb-1`}>
-                      {education.institution}
-                    </p>
-                    <p className={`${typography.body.xsmall} text-muted-foreground/70`}>
-                      {education.year} · {education.gpa}
-                    </p>
                   </div>
                 </motion.div>
               </div>

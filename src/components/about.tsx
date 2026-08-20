@@ -8,7 +8,7 @@ import { fadeInLeft, staggeredFadeInUp } from "@/lib/motion";
 const bio = [
   "I build products by starting with the problem — understanding users, defining what matters, and turning ideas into shipped experiences. My technical background helps me work closely with engineers, evaluate trade-offs, and make decisions grounded in both user needs and technical reality.",
 
-  "I've built and shipped three products independently, from identifying opportunities to deployment. With Ascendra, an AI-powered career platform, I explored how AI could reduce friction in the job search journey. Across projects and early-stage experiences, I have consistently focused on one question: are we solving the right problem?",
+  "I've built and shipped products and analytical platforms independently, from identifying opportunities to deployment. With DollarDairy, I integrated AI for conversational finance tracking, while with Ascendra, I built a comprehensive full-stack career platform. Across all projects and operations, I focus on one question: are we solving the right problem?",
 
   "I thrive in ambiguous environments where problems are not clearly defined. Through solo products, leadership roles, and startup experiences, I've learned to break down uncertainty, prioritize impact, and iterate quickly based on feedback and evidence."
 ];
