@@ -13,6 +13,7 @@ const education = [
     period: "May 2026",
     achievements: [
       "CGPA: 8.34 / 10.0",
+      "No backlogs or history of arrears.",
       "Progressed continuously from higher secondary to engineering without gap years, maintaining strong academic performance while gaining practical industry experience through internships and independent projects."
     ]
   },
@@ -24,6 +25,15 @@ const education = [
     achievements: [
       "Graduated with 99% marks, demonstrating strong academic foundation and consistent performance.",
       "Built the academic foundation that enabled continuous progression without gap years into engineering college and professional experiences."
+    ]
+  },
+  {
+    institution: "Markaz Girls HSS",
+    degree: "Secondary School (10th Grade / SSLC)",
+    location: "Kerala, India",
+    period: "2020",
+    achievements: [
+      "Achieved 100% marks — a result that established early confidence in focused, high-stakes academic performance."
     ]
   }
 ];

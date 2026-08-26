@@ -57,19 +57,19 @@ export default function Certifications() {
                     Only PM-relevant credentials displayed
                     =============================================== */}
                 <motion.div {...staggeredFadeInUp(0)}>
-                  <div className={spacing.content.normal}>
+                  <div className={spacing.content.loose}>
                     {certifications.map((cert, certIndex) => (
                       <motion.div
                         key={cert.name}
                         {...staggeredFadeInUp(certIndex * 0.1)}
-                        className="group"
+                        className={`group${certIndex < certifications.length - 1 ? " border-b border-border/20 pb-10 sm:pb-12" : ""}`}
                       >
                         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 sm:gap-4">
                           <div className="flex-1">
                             <h4 className={`${typography.body.base} text-foreground mb-1 group-hover:text-accent transition-colors duration-700`}>
                               {cert.name}
                             </h4>
-                            <p className={`${typography.body.xsmall} text-muted-foreground mb-2 sm:mb-3`}>
+                            <p className={`${typography.body.xsmall} text-muted-foreground mb-3 sm:mb-4`}>
                               {cert.issuer} · {cert.date}
                             </p>
                             <p className={`${typography.body.small} text-muted-foreground ${typography.lineHeight.relaxed} ${typography.fontWeight.light} ${container.normal}`}>
@@ -81,7 +81,7 @@ export default function Certifications() {
                               href={cert.credential}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className={`${typography.label.base} text-muted-foreground hover:text-accent transition-colors duration-700 whitespace-nowrap`}
+                              className={`${typography.label.base} text-muted-foreground hover:text-accent transition-colors duration-700 whitespace-nowrap mt-1`}
                             >
                               View
                             </a>

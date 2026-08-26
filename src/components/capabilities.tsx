@@ -30,7 +30,7 @@ const capabilities = [
     title: "Business & Data Analysis",
     description: "I gather requirements, identify process gaps, and translate data into decisions. SQL-proficient for querying, comfortable building dashboards, and experienced in translating campaign and pipeline data into actionable recommendations.",
     evidence: "Built an interactive Tableau and SQL dashboard for CRM Sales Pipeline Analysis. At Nomad Gifts, analyzed influencer campaign data to identify high-performing creator segments. At Admigo, built qualification systems to streamline screening operations.",
-    outcome: "SQL and Tableau proficient. Consistently used data to drive operational and product decisions."
+    outcome: "SQL, Excel, and Tableau proficient. Consistently used data to drive operational and product decisions."
   },
   {
     title: "Stakeholder Management & Execution",

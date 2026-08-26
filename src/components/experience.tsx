@@ -45,7 +45,8 @@ const experiencesByYear = {
         "Worked with fundamental Machine Learning and Artificial Intelligence concepts through practical implementations, gaining hands-on experience beyond academic coursework.",
         "Explored data preparation, model development, evaluation, and the practical application of ML techniques to real-world problems.",
         "Worked alongside industry professionals and gained exposure to real-world technical workflows, documentation, problem solving, and project execution.",
-        "Bridged academic knowledge with practical industry experience, strengthening my ability to understand technical requirements and work within structured teams."
+        "Bridged academic knowledge with practical industry experience, strengthening my ability to understand technical requirements and work within structured teams.",
+        "Directly informs how I evaluate AI/ML feasibility and trade-offs in product decisions — understanding where a model genuinely solves a user problem versus where it adds unnecessary complexity."
       ]
     },
     {
