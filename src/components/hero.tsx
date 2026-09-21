@@ -63,7 +63,7 @@ export default function Hero() {
                 transition={{ duration: 1.2, delay: 0.8 }}
                 className={`${typography.label.base} ${typography.label.tracking} text-muted-foreground text-center md:text-left`}
               >
-                Product Builder · AI Product · Strategy & Execution
+                CS Graduate · Product Builder
               </motion.p>
 
               <motion.h1
@@ -80,13 +80,19 @@ export default function Hero() {
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1.2, delay: 1.2 }}
+                transition={{ duration: 1.2, delay: 1.15 }}
+                className={`${typography.heading.h4} ${typography.fontFamily.serif} text-foreground text-center md:text-left mx-auto md:mx-0 ${typography.lineHeight.normal}`}
+              >
+                I like figuring out what should be built — and then building it.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2, delay: 1.3 }}
                 className={`${typography.body.base} text-muted-foreground ${container.reading} md:max-w-none ${typography.lineHeight.relaxed} ${typography.fontWeight.light} text-center md:text-left mx-auto md:mx-0`}
               >
-                I turn ideas into shipped products — from problem discovery and
-                product decisions to deployment. Built three products
-                independently, including an AI-powered career platform.
-                Anthropic certified in AI Fluency and Prompt Engineering.
+                CS graduate and product builder interested in the space between users, technology, and business. I build AI-powered products, think through product decisions, and enjoy turning ideas into things people can actually use.
               </motion.p>
 
               <motion.div
@@ -137,8 +143,7 @@ export default function Hero() {
                 transition={{ duration: 1.2, delay: 1.6 }}
                 className={`${typography.body.xsmall} text-muted-foreground/60 ${typography.fontWeight.light} text-center md:text-left`}
               >
-                Open to Product Management · Product Strategy · AI Product roles ·
-                Bengaluru
+                Open to Product Management · Product Operations · Business Analysis · Strategy & Ops · Bengaluru
               </motion.p>
             </div>
           </motion.div>

@@ -20,10 +20,9 @@ const leadership = [
     organization: "IEDC — GEC Wayanad",
     period: "Oct 2024 – Jan 2026",
     highlights: [
-      "Led 30+ member innovation cell, coordinating projects, workshops, and startup initiatives",
-      "Served as communication bridge between student teams and institutional leadership",
-      "Managed competing priorities and stakeholder alignment across students, faculty, and external mentors",
-      "Owned outcomes for innovation initiatives from conception to execution"
+      "Led a 30+ member student innovation cell, coordinating workshops, hackathons, and early-stage projects",
+      "Served as the key coordination bridge between student builders, faculty mentors, and institutional leadership",
+      "Balanced conflicting timelines and kept student teams focused on tangible project milestones"
     ]
   },
   {
@@ -31,21 +30,27 @@ const leadership = [
     organization: "ACE & IEEE — GEC Wayanad",
     period: "Jul 2023 – May 2025",
     highlights: [
-      "Hosted and coordinated events with 500+ total attendees across two student associations",
-      "Managed cross-team logistics, vendor coordination, and stakeholder communication",
-      "Executed on-ground events under deadline pressure with multiple moving parts",
-      "Managed external communications, announcements, and brand messaging simultaneously"
+      "Organized and hosted technical events and programs with 500+ total attendees across two associations",
+      "Coordinated cross-functional teams, venue logistics, and real-time troubleshooting under tight deadlines",
+      "Managed public announcements, speaker communications, and student engagement"
     ]
   },
   {
-    role: "Online Learning Consultant",
-    organization: "YoursTutor",
-    period: "Jan 2024 – Jun 2026",
+    role: "Operations & Business Development Consultant",
+    organization: "Admigo Overseas & Careers",
+    period: "Jun 2026 – Jul 2026",
     highlights: [
-      "Managed complete client relationships with 100% student retention across engagement",
-      "Designed personalised learning programs for 10+ students with measurable improvement tracking",
-      "Owned student onboarding, session scheduling, parent communication, and progress reporting",
-      "Conducted gap analysis and adapted curriculum per learner needs"
+      "Identified candidate qualification bottlenecks and built a structured intake workflow for the founder",
+      "Streamlined candidate screening and managed early-stage stakeholder handoffs under lean constraints"
+    ]
+  },
+  {
+    role: "Social Media & Influencer Marketing Intern",
+    organization: "Nomad Gifts (now TopoNomad)",
+    period: "Jun 2023 – Nov 2023",
+    highlights: [
+      "Managed creator outreach, relationship coordination, and end-to-end campaign deliverables",
+      "Analyzed engagement metrics across creator segments to guide future marketing efforts"
     ]
   }
 ];
@@ -57,10 +62,10 @@ export default function Leadership() {
         <motion.div {...staggeredFadeInUp(0)}>
           <div className="text-center mb-16 md:mb-20 lg:mb-32 xl:mb-48">
             <h2 className={`${typography.display.section} ${typography.fontFamily.serif} text-foreground mb-6 sm:mb-8 ${container.wide} mx-auto ${typography.lineHeight.normal}`}>
-              I believe leadership is about enabling others to do their best work. It's not about being the smartest person in the room—it's about creating an environment where everyone can contribute meaningfully.
+              Good coordination is invisible — it creates the clarity and momentum people need to do their best work.
             </h2>
             <p className={`${typography.body.base} text-muted-foreground ${container.normal} mx-auto ${typography.fontWeight.light}`}>
-              My approach combines clear communication, stakeholder alignment, and ownership of outcomes. Whether leading a 30+ member innovation cell or managing client relationships, I focus on building trust, setting clear expectations, and delivering results that matter.
+              Whether leading a 30-member innovation cell, organizing multi-day events, or working directly with founders and creators, I focus on clear communication, proactive ownership, and following through on what we set out to do.
             </p>
           </div>
         </motion.div>

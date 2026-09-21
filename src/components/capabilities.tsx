@@ -15,34 +15,28 @@ import { fadeInLeft, staggeredFadeInUp } from "@/lib/motion";
 
 const capabilities = [
   {
-    title: "Product Thinking",
-    description: "I start with the problem, not the solution. Before writing a single line of code or spec, I ask: who has this problem, how painful is it, and what's the smallest thing we can build to learn if our approach works?",
-    evidence: "Identified job seeker workflow fragmentation and built Ascendra to solve it. Identified spending tracking friction and built DollarDairy around conversational queries. Each product started with a problem, not a technology.",
-    outcome: "Four products and platforms shipped from problem identification through scoping, architecture, and deployment."
+    title: "Product",
+    description: "Product thinking, user stories, requirements, prioritization, and product discovery. I focus on breaking down user friction, evaluating what is worth building, and keeping scope focused on core outcomes.",
+    evidence: "Identified job-seeker workflow fragmentation and built Ascendra to solve it. Designed DollarDairy around conversational queries to eliminate manual expense logging friction. Explored voice-first conversational UX with WordPlay.",
+    outcome: "Three independent products shipped from problem framing and requirement definition through scoping and deployment."
   },
   {
-    title: "AI Product Fluency",
-    description: "AI-fluent in Prompt Engineering and LLM architectures. I understand LLM capabilities, limitations, and cost structures well enough to make informed build-vs-buy decisions and design AI features that provide genuine user value.",
-    evidence: "Integrated Google's Gemini API in DollarDairy for natural language finance queries — choosing API integration over custom NLP based on accuracy, rate limits, and time-to-validation. Designed AI-assisted qualification workflow at Admigo.",
-    outcome: "Built conversational, AI-powered interfaces in production applications. Can evaluate where AI adds real value versus where it's a checkbox."
+    title: "Data & Analytics",
+    description: "SQL, Excel, Power BI, Tableau, Amplitude, Mixpanel. Comfortable querying structured databases, building intuitive reporting dashboards, and analyzing funnel behavior.",
+    evidence: "HackerRank certified in Advanced SQL (complex joins, subqueries, and window functions). Built pipeline analysis dashboards in Tableau and analyzed creator performance metrics at Nomad Gifts.",
+    outcome: "Ability to pull insights directly from raw data and translate quantitative trends into actionable product and operational decisions."
   },
   {
-    title: "Business & Data Analysis",
-    description: "I gather requirements, identify process gaps, and translate data into decisions. SQL-proficient for querying, comfortable building dashboards, and experienced in translating campaign and pipeline data into actionable recommendations.",
-    evidence: "Built an interactive Tableau and SQL dashboard for CRM Sales Pipeline Analysis. At Nomad Gifts, analyzed influencer campaign data to identify high-performing creator segments. At Admigo, built qualification systems to streamline screening operations.",
-    outcome: "SQL, Excel, and Tableau proficient. Consistently used data to drive operational and product decisions."
+    title: "AI & Automation",
+    description: "LLMs, prompt engineering, AI workflows, n8n, Vapi. Anthropic certified in AI Fluency and Prompt Engineering. Focused on applying AI where it provides tangible user leverage rather than novelty.",
+    evidence: "Integrated Google's Gemini API directly for plain-language financial querying in DollarDairy. Orchestrated real-time voice interactions using Vapi in WordPlay. Designed automated workflow pipelines.",
+    outcome: "Working knowledge of latency considerations, prompt design, API costs, and conversational UX patterns in production environments."
   },
   {
-    title: "Stakeholder Management & Execution",
-    description: "I coordinate across teams, manage competing priorities, and own outcomes end to end. Whether it's a 30+ member student organization or a client relationship with parents and students, I communicate clearly and deliver consistently.",
-    evidence: "Managed full candidate pipeline at Admigo from inquiry through partner handoff. Led IEDC innovation cell across 6 concurrent initiatives. Maintained 100% client retention across 2+ years at YoursTutor.",
-    outcome: "Track record of managing complex stakeholder relationships and delivering under ambiguity."
-  },
-  {
-    title: "Technical Foundation",
-    description: "I understand full-stack architecture, APIs, databases, and deployment well enough to evaluate feasibility, estimate effort, and have credible conversations with engineers — without needing to write production code daily.",
-    evidence: "Architected Ascendra with Clean Architecture and Repository Pattern. Made deliberate technology choices (PostgreSQL vs MongoDB, Claude API vs custom NLP) based on product requirements, not personal preference.",
-    outcome: "Technical decisions that served product goals: scalability for Ascendra's AI roadmap, flexible schema for HikerNet's evolving data model."
+    title: "Technical",
+    description: "Python, FastAPI, Angular, PostgreSQL, Git. Grounded in Computer Science fundamentals, allowing me to understand system architecture and collaborate seamlessly with engineers.",
+    evidence: "Architected Ascendra with Clean Architecture and Repository Pattern using Angular and FastAPI. Handled relational data modeling with PostgreSQL and built mobile experiences in React Native.",
+    outcome: "Able to evaluate technical feasibility, understand engineering trade-offs, and independently build working products."
   }
 ];
 

@@ -31,7 +31,7 @@ export default function Resume() {
               Lezin Sajid
             </h3>
             <p className={`${typography.body.small} text-muted-foreground mb-4 sm:mb-6 ${typography.fontWeight.light}`}>
-              AI-Fluent Product Builder · Business Analyst · Strategy & Operations
+              CS Graduate · Product Builder · Product Management &amp; Operations
             </p>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground">
               <span>Bengaluru, India</span>

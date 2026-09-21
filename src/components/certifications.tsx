@@ -20,27 +20,27 @@ const certifications = [
     issuer: "Anthropic",
     date: "Jun 2026",
     credential: "https://www.anthropic.com",
-    description: "Comprehensive understanding of AI systems, capabilities, limitations, and ethical considerations. Applied directly in product decisions — evaluating where AI adds genuine user value versus where it's unnecessary complexity."
+    description: "Foundational understanding of LLM capabilities, constraints, and safety considerations. Applied when evaluating where generative AI delivers genuine user value versus unnecessary friction."
   },
   {
     name: "Claude 101 — Prompt Engineering",
     issuer: "Anthropic",
     date: "Jun 2026",
     credential: "https://www.anthropic.com",
-    description: "Advanced prompt engineering techniques for optimizing LLM interactions. Applied in DollarDairy for natural language finance queries — designing prompts that translate user questions into accurate database queries."
+    description: "Structured prompt design, persona configuration, and context management for conversational systems. Directly applied in building natural-language interactions for DollarDairy and WordPlay."
   },
   {
     name: "SQL (Advanced)",
     issuer: "HackerRank",
     date: "Jun 2026",
     credential: "https://www.hackerrank.com",
-    description: "Advanced SQL including complex joins, subqueries, window functions, and query optimization. The foundation for data-driven product decisions, analytics dashboards, and impact measurement."
+    description: "Advanced SQL including multi-table joins, subqueries, window functions, and query optimization. Used for exploratory data analysis, dashboarding, and tracking product engagement."
   }
 ];
 
 export default function Certifications() {
   return (
-    <Section id="credentials">
+    <Section id="credentials" className="pb-28 md:pb-36 lg:pb-44">
       <PageContainer>
         <SplitLayout 
           leftWidth="narrow"

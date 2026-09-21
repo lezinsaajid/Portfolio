@@ -20,16 +20,16 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Lezin Sajid | Product Manager · AI-Fluent · Bengaluru",
-  description: "Product-oriented problem solver with a technical foundation. Shipped 3 products from problem discovery through deployment. Anthropic certified in AI Fluency and Prompt Engineering. Seeking Associate PM, Product Analyst, and AI Product roles.",
-  keywords: ["Associate Product Manager", "Product Analyst", "Product Operations", "AI Product", "Business Analyst", "AI Fluency", "Anthropic Certified", "Prompt Engineering", "SaaS", "Product Thinking"],
+  title: "Lezin Sajid | Product Builder · Bengaluru",
+  description: "Computer Science graduate and product builder interested in Product Management, Product Operations, Business Analysis, and AI-powered products. Moving toward product with hands-on technical and operational foundations.",
+  keywords: ["Product Management", "Product Operations", "Business Analysis", "Strategy & Operations", "AI Products", "Product Builder", "Bengaluru", "Lezin Sajid"],
   authors: [{ name: "Lezin Sajid" }],
   creator: "Lezin Sajid",
   publisher: "Lezin Sajid",
   metadataBase: new URL("https://lezinsajid.com"),
   openGraph: {
-    title: "Lezin Sajid | Product Manager · AI-Fluent · Bengaluru",
-    description: "Product-oriented problem solver with a technical foundation. Shipped 3 products from problem discovery through deployment. Anthropic certified. Seeking Associate PM and Product Analyst roles.",
+    title: "Lezin Sajid | Product Builder · Bengaluru",
+    description: "Computer Science graduate and product builder interested in Product Management, Product Operations, Business Analysis, and AI-powered products.",
     type: "website",
     locale: "en_US",
     siteName: "Lezin Sajid",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lezin Sajid | Product Manager · AI-Fluent · Bengaluru",
-    description: "Product-oriented problem solver with a technical foundation. Shipped 3 products from problem discovery through deployment. Anthropic certified. Seeking Associate PM and Product Analyst roles.",
+    title: "Lezin Sajid | Product Builder · Bengaluru",
+    description: "Computer Science graduate and product builder interested in Product Management, Product Operations, Business Analysis, and AI-powered products.",
     creator: "@lezinsajid",
   },
   robots: {

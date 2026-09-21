@@ -6,29 +6,28 @@ import { typography, spacing } from "@/lib/design-tokens";
 import { fadeInLeft, staggeredFadeInUp } from "@/lib/motion";
 
 const bio = [
-  "I build products by starting with the problem — understanding users, defining what matters, and turning ideas into shipped experiences. My technical background helps me work closely with engineers, evaluate trade-offs, and make decisions grounded in both user needs and technical reality.",
-
-  "I've built and shipped products and analytical platforms independently, from identifying opportunities to deployment. With DollarDairy, I integrated AI for conversational finance tracking, while with Ascendra, I built a comprehensive full-stack career platform. Across all projects and operations, I focus on one question: are we solving the right problem?",
-
-  "I thrive in ambiguous environments where problems are not clearly defined. Through solo products, leadership roles, and startup experiences, I've learned to break down uncertainty, prioritize impact, and iterate quickly based on feedback and evidence."
+  "I studied Computer Science, but over time I realized that the part of technology I enjoy most isn't just writing code.",
+  "I like understanding the problem, thinking about the user, figuring out what is worth building, and working across different sides of a product.",
+  "I've built multiple products myself, experimented with AI and automation, and gained hands-on experience in operations through my current role at Airlearn.",
+  "I'm now looking to grow toward Product Management, Product Operations, Business Analysis, and Strategy & Operations roles."
 ];
 
 const principles = [
   {
-    label: "Problem First",
-    detail: "Start with understanding the user, context, and underlying problem before jumping into solutions."
+    label: "Understand",
+    detail: "Start with the actual problem and the people experiencing it."
   },
   {
-    label: "Build & Learn",
-    detail: "Ship focused solutions, measure outcomes, and continuously improve through real feedback."
+    label: "Decide",
+    detail: "Figure out what matters now, what can wait, and what is worth building."
   },
   {
-    label: "AI as Leverage",
-    detail: "Use AI thoughtfully to improve workflows, unlock capabilities, and create meaningful user value."
+    label: "Build",
+    detail: "Turn the decision into something usable."
   },
   {
-    label: "Evidence Over Assumptions",
-    detail: "Balance intuition with data, constraints, and clear reasoning when making product decisions."
+    label: "Learn",
+    detail: "See what works, what doesn't, and what should change next."
   }
 ];
 
@@ -61,7 +60,7 @@ export default function About() {
                   className="pt-4 sm:pt-6 md:pt-8 border-t border-border/50"
                 >
                   <p className={`${typography.label.base} text-muted-foreground mb-6 sm:mb-8`}>
-                    How I Work
+                    Product Thinking
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
@@ -80,6 +79,13 @@ export default function About() {
                       </motion.div>
                     ))}
                   </div>
+
+                  <motion.p
+                    {...staggeredFadeInUp(1.0)}
+                    className={`${typography.body.base} ${typography.fontFamily.serif} italic text-foreground pt-6 mt-6 border-t border-border/30`}
+                  >
+                    I care about building the right thing, not just building more things.
+                  </motion.p>
                 </motion.div>
               </div>
             </motion.div>

@@ -15,50 +15,37 @@ import { staggeredFadeInUp } from "@/lib/motion";
 // ============================================
 
 const aiStack = [
-  { name: "Claude API", description: "Primary LLM for natural language processing and AI workflows" },
-  { name: "OpenAI API", description: "Alternative LLM integration for redundancy and comparison" },
-  { name: "Prompt Engineering", description: "Anthropic-certified prompt design and optimization" },
-  { name: "AI Workflow Design", description: "End-to-end AI-assisted process automation" },
-  { name: "Conversational Systems", description: "Design of AI-powered chat interfaces and query systems" }
+  { name: "LLMs & Prompt Engineering", description: "Anthropic certified in prompt design, evaluation, and context management" },
+  { name: "Vapi", description: "Low-latency voice orchestration for conversational voice assistants" },
+  { name: "Gemini API", description: "Direct API integration for natural language querying and intent detection" },
+  { name: "AI Workflows & n8n", description: "Automated end-to-end data extraction and operational pipelines" }
 ];
 
 const techStack = [
-  { name: "Angular", description: "Frontend framework for enterprise applications" },
-  { name: "React Native", description: "Cross-platform mobile development" },
-  { name: "FastAPI", description: "Modern Python backend framework" },
-  { name: "Node.js", description: "JavaScript runtime for server-side applications" },
-  { name: "PostgreSQL", description: "Relational database for structured data" },
-  { name: "MongoDB", description: "NoSQL database for flexible schemas" },
-  { name: "Docker", description: "Containerization for deployment consistency" },
-  { name: "Tailwind CSS", description: "Utility-first CSS framework" },
-  { name: "TypeScript", description: "Type-safe JavaScript development" },
-  { name: "Python", description: "Data science, AI/ML, and backend development" }
+  { name: "Python & FastAPI", description: "Backend APIs, data handling, and Clean Architecture services" },
+  { name: "SQL & PostgreSQL", description: "Relational data modeling, complex queries, and window functions" },
+  { name: "Angular", description: "Component-driven frontend architecture for web platforms" },
+  { name: "Power BI & Tableau", description: "Analytics dashboards, pipeline tracking, and metric visualization" },
+  { name: "Amplitude & Mixpanel", description: "Event tracking, user journey mapping, and funnel analysis" },
+  { name: "Git & Docker", description: "Version control workflows and containerized deployments" }
 ];
 
 const principles = [
   {
-    title: "First Principles Thinking",
-    description: "Break problems down to fundamental truths and build up from there. Don't accept assumptions—question everything."
+    title: "Understand",
+    description: "Start with the actual problem and the people experiencing it before proposing solutions."
   },
   {
-    title: "User-Centric Design",
-    description: "Start with user needs, not technical constraints. The best technology is invisible to the user."
+    title: "Decide",
+    description: "Figure out what matters now, what can wait, and what is genuinely worth building."
   },
   {
-    title: "Iterative Execution",
-    description: "Ship fast, learn faster. Perfect is the enemy of done. Iterate based on real feedback."
+    title: "Build",
+    description: "Turn decisions into usable, dependable products that solve real friction."
   },
   {
-    title: "Systems Thinking",
-    description: "Understand how components interact. Design for scalability, maintainability, and long-term viability."
-  },
-  {
-    title: "AI as Amplifier",
-    description: "Use AI to augment human capability, not replace it. Focus on high-leverage applications."
-  },
-  {
-    title: "Business Alignment",
-    description: "Every technical decision should serve business objectives. Build what matters, not what's cool."
+    title: "Learn",
+    description: "Observe real usage, gather clear evidence, and determine what should change next."
   }
 ];
 

@@ -7,9 +7,9 @@ import { fadeInLeft, staggeredFadeInUp } from "@/lib/motion";
 
 export default function Contact() {
   return (
-    <Section id="contact">
+    <Section id="contact" className="pt-12 sm:pt-16 md:pt-20">
       <PageContainer>
-        <div className="border-t border-border pt-16 md:pt-20 lg:pt-24">
+        <div className="border-t border-border pt-20 md:pt-28 lg:pt-36">
           <SplitLayout
             leftWidth="narrow"
             leftColumn={
@@ -37,9 +37,9 @@ export default function Contact() {
                   <p
                     className={`${typography.body.base} text-muted-foreground ${typography.lineHeight.relaxed} ${typography.fontWeight.light} ${container.reading}`}
                   >
-                    I&apos;m looking for opportunities in Associate Product
-                    Management, Product Strategy, Product Operations, and AI
-                    Product roles. If you&apos;re building something meaningful,
+                    I&apos;m looking for opportunities in Product Management,
+                    Product Operations, Business Analysis, and Strategy &amp; Operations
+                    roles. If you&apos;re building something meaningful,
                     I&apos;d love to talk.
                   </p>
 
@@ -56,7 +56,7 @@ export default function Contact() {
           />
         </div>
 
-        <footer className="border-t border-border py-12 md:py-16 mt-16 md:mt-20">
+        <footer className="border-t border-border py-14 md:py-20 mt-20 md:mt-28 lg:mt-32">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-12">
             <div className="space-y-2">
               <p className={`${typography.body.small} text-muted-foreground`}>
