@@ -53,7 +53,7 @@ export default function Resume() {
 
           <motion.div {...staggeredFadeInUp(0.4)} className="text-center">
             <a
-              href="/resume.pdf"
+              href="/Lezin_Sajid_Resume.pdf"
               download
               className="group relative inline-flex items-center gap-4 text-foreground pb-1"
             >
