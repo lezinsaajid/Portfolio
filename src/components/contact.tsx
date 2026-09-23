@@ -91,7 +91,7 @@ export default function Contact() {
                 GitHub
               </a>
               <a
-                href="/resume.pdf"
+                href="/Lezin_Sajid_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors duration-700"

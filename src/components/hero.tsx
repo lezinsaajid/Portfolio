@@ -109,7 +109,7 @@ export default function Hero() {
                   <span className="w-12 h-px bg-foreground group-hover:bg-accent transition-colors duration-700" />
                 </a>
                 <a
-                  href="/resume.pdf"
+                  href="/Lezin_Sajid_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-flex items-center gap-4 text-foreground pb-1"
