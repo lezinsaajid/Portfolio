@@ -46,7 +46,7 @@ export default function Resume() {
                 Resume PDF
               </p>
               <p className={`${typography.body.xsmall} text-muted-foreground/70`}>
-                Place your resume at: <code className="bg-background px-2 sm:px-3 py-1 sm:py-2 rounded text-[10px] sm:text-xs">public/resume.pdf</code>
+                Place your resume at: <code className="bg-background px-2 sm:px-3 py-1 sm:py-2 rounded text-[10px] sm:text-xs">public/Lezin_Sajid_Resume.pdf</code>
               </p>
             </div>
           </div>
