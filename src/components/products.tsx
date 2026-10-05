@@ -58,8 +58,8 @@ const products = [
     metrics: "Speaking minutes per session, conversational turn completion rate, and 14-day repeat practice frequency.",
     techContext: "Vapi · Conversational AI · WebRTC · Node.js · Prompt Engineering",
     image: "/wordplay_logo.jpg",
-    github: "https://github.com/lezinsaajid",
-    demo: "#"
+    github: "https://github.com/lezinsaajid/wordplay-with-naina",
+    demo: "https://wordplay-with-naina.lovable.app"
   },
   {
     name: "HikerNet",
