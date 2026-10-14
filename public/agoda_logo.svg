@@ -1,0 +1,7 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#F8F2EC"/>
+  <rect x="0" y="0" width="800" height="500" fill="#E3D7CF" opacity="0.3"/>
+  <text x="400" y="240" font-family="sans-serif" font-size="48" font-weight="500" fill="#241D1A" text-anchor="middle">Agoda</text>
+  <text x="400" y="290" font-family="sans-serif" font-size="24" font-weight="400" fill="#59171B" text-anchor="middle">Hotel Booking Reliability</text>
+  <text x="400" y="330" font-family="sans-serif" font-size="16" font-weight="300" fill="#7C6E66" text-anchor="middle">Product Teardown · PRD · UX Research</text>
+</svg>

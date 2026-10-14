@@ -74,6 +74,20 @@ const products = [
     image: "/hk_logo.jpg",
     github: "https://github.com/lezinsaajid/hikernet",
     demo: "#"
+  },
+  {
+    name: "Agoda — Hotel Booking Reliability",
+    tagline: "Product Teardown · PRD · UX Research",
+    type: "Product Case Study · In Progress",
+    problem: "An independent product case study investigating hotel booking reliability, supplier-side cancellations, customer communication, and accommodation recovery. The research examines two personal booking experiences, publicly reported customer incidents across markets, and Agoda's published booking and reservation-guarantee policies.",
+    mvpScope: "Focus areas include customer journey mapping, evidence-based problem framing, policy-to-experience analysis, cross-market desk research, and product requirements and success metrics.",
+    keyTradeoff: "Current status: Discovery and evidence collection in progress.",
+    whatIDidntBuild: "This is a research and analysis project, not a software build. The scope is limited to investigation, problem framing, and PRD development.",
+    metrics: "Research completion rate, problem clarity metrics, and alignment of proposed solutions with identified customer pain points.",
+    techContext: "Product Management · PRD · Customer Experience",
+    image: "/agoda_logo.svg",
+    github: "#",
+    demo: "https://veil-eucalyptus-9f3.notion.site/Agoda-Hotel-Booking-Reliability-Product-Teardown-PRD-3f79d40a2ecd80979fd1d786ecc93d0a"
   }
 ];
 
@@ -205,17 +219,18 @@ export default function Products() {
                   </div>
 
                   {/* CTAs */}
-                  {/* CTAs */}
                   <div className="flex gap-4 sm:gap-6 pt-4">
-                    <a
-                      href={product.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group relative inline-flex items-center gap-3 text-foreground pb-1"
-                    >
-                      <span className={typography.label.base}>Source Code</span>
-                      <span className="w-8 h-px bg-foreground group-hover:bg-accent transition-colors duration-700" />
-                    </a>
+                    {product.github !== "#" && (
+                      <a
+                        href={product.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative inline-flex items-center gap-3 text-foreground pb-1"
+                      >
+                        <span className={typography.label.base}>Source Code</span>
+                        <span className="w-8 h-px bg-foreground group-hover:bg-accent transition-colors duration-700" />
+                      </a>
+                    )}
 
                     {product.demo !== "#" && (
                       <a
@@ -224,7 +239,9 @@ export default function Products() {
                         rel="noopener noreferrer"
                         className="group relative inline-flex items-center gap-3 text-foreground pb-1"
                       >
-                        <span className={typography.label.base}>Live Product</span>
+                        <span className={typography.label.base}>
+                          {product.type.includes("Case Study") ? "View Case Study" : "Live Product"}
+                        </span>
                         <span className="w-8 h-px bg-foreground group-hover:bg-accent transition-colors duration-700" />
                       </a>
                     )}
